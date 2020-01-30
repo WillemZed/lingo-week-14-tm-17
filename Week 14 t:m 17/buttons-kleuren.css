@@ -1,0 +1,12 @@
+#container {
+    background-color: grey;
+    text-align: center;
+    margin: 0px;
+}
+button {
+    font-size: 30px;
+    background-color: green;
+    width: 225px;
+    height: 100px;
+    margin: 10px;
+}

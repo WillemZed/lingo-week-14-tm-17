@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0%;
+    background-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    text-align: center;
+}
+
+#container {
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-gap: 20px;
+}
+
+#container div {
+    background-color: white;
+    border: 1px solid black;
+    margin-left: 400px;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+#input {
+    position:;
+    width: 200px;
+    height: 30px;
+}
+
+#congrats {
+    float: left;
+}
+
+
+
+
+
+
+
+
