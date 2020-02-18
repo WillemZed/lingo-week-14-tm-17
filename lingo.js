@@ -1,6 +1,8 @@
+
 makeSquare();
 makeButton();
 makeInput();
+makeP()
 
 var woordBalk = document.getElementById("input");
 var body = document.getElementsByTagName("body")[0];
@@ -13,6 +15,13 @@ var count = 0;
 console.log(woordje)
 
 button.onclick = checkwoord;
+
+function makeP() {
+    var congratsP = document.createElement("P")
+    congratsP.id = "congrats"
+    container.appendChild(congratsP);
+    congrats.style.display = "none"
+}
 
 
 function makeInput() {//Maakt input om de woord in te typen
@@ -38,18 +47,26 @@ function makeButton() {//maakt de knop "Check woord"
     container.appendChild(btn);
 }
 
+    var ingevuldWoord = woordje;
+    var ingevuldLetter = woordBalk.value;
 
+    var arrayWoord = ingevuldWoord.split("");
+    console.log("Woordje = " + arrayWoord);
+    var arrayLetter = ingevuldLetter.split("");
+    document.getElementById("vak1").innerHTML = arrayWoord[0];
 
 
 function checkwoord(){// checkt of het ingevulde woord klopt met wat het antwoord is, bij groen is het goed, bij geel is het het goede letter maar op de verkeerde plek, als er niks verandert is het fout
+
     var ingevuldWoord = woordje;
     var ingevuldLetter = woordBalk.value;
-    
-    var arrayWoord = ingevuldWoord.split("");
-    console.log('arrayWoord ' + arrayWoord);
-    var arrayLetter = ingevuldLetter.split("");
 
+    var arrayWoord = ingevuldWoord.split("");
+    console.log("Woordje = " + arrayWoord);
+    var arrayLetter = ingevuldLetter.split("");
+    
     for(i = 0; i < 5; i++){
+        
         var div = document.getElementById("vak" + ((i + 1) + (5 * count)))
 
         div.style.backgroundColor = "white"
@@ -60,6 +77,7 @@ function checkwoord(){// checkt of het ingevulde woord klopt met wat het antwoor
         }
     }
 
+    
     for(i = 0; i < 5; i++){
         var div = document.getElementById("vak" + ((i + 1) + (5 * count)))
             if (div.style.backgroundColor != "green") {
@@ -69,13 +87,8 @@ function checkwoord(){// checkt of het ingevulde woord klopt met wat het antwoor
             }
     }
 
-    if (div.style.backgroundColor == "green"){
-        function makeDiv() {
-            var congratsDiv = document.createElement("DIV")
-            congratsDiv.id = "congrats"
-            container.appendChild(congratsDiv);
-        }
-        makeDiv()
+    if (ingevuldWoord == ingevuldLetter){
+        congrats.style.display = "block"
         congrats.innerHTML = "Gefeliciteerd!"
         button.disabled = "true"
     }

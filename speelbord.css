@@ -15,13 +15,15 @@ h1 {
     grid-gap: 20px;
 }
 
-#container div {
+#vak1, #vak2, #vak3, #vak4, #vak5, #vak6, #vak7, #vak8, #vak9, #vak10, #vak11, #vak12, #vak13, #vak14, #vak15, #vak16, #vak17, #vak18, #vak19, #vak20, #vak21, #vak22, #vak23, #vak24, #vak25 {
     background-color: white;
     border: 1px solid black;
     margin-left: 400px;
     width: 100px;
     height: 100px;
     margin-top: 20px;
+    padding-top: 60px;
+    padding-left: 50px;
 }
 
 #input {
@@ -31,7 +33,8 @@ h1 {
 }
 
 #congrats {
-    float: left;
+    margin-left: 350px;
+    font-size: 40px;
 }
 
 
